@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma</title>
+    <style>
+        *  { /*todos os itens*/
+    margin: 0; /*tirar os prenechimentos internos das caixas*/
+    padding: 0;
+    box-sizing: border-box; /*fixar o tamanho da caixa*/
+ }
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+
+body {
+    text-align: center; /*Colocar a div no centrol*/
+    background-color: #E5E5E5; /*fundo branco*/
+
+
+}
+
+#central {
+    /*border: 1px solid red; */
+    display: flex; /*flexibilidade do dysplay*/
+    /*align-items: center; /*alinhar os /itens no centro*/
+    flex-direction: column; /*colocar os itens em coluna*/
+    width: fit-content; /*largura*/
+    margin: 100px auto;
+    background-color: #FFFFFF;
+    width: 300px; /*largura*/
+    height: 600px; /*altura*/
+    border-radius: 10px;
+    border-style: outset;
+
+}
+
+div header {
+    /*border: 1px solid red;*/
+    background: url(./imagem/cinza.svg);
+    background-position: -80px bottom;/*inferior*/ 
+}
+
+div header.logo{
+    /* border: 1px solid red; */
+    display: flex; /*liberar o flex*/
+}
+
+div header.logo img {
+    width: 230px; /*tamanho*/
+}
+ 
+div span {
+    color: #110505; /*cor da fonte*/
+    font-family: 'Boogaloo', cursive;
+    font-size: 40px; /*tamanho da fonte*/
+}
+
+div header.logo img:hover{
+    transform: scale(1.1); /*movimentação 1.1*/
+    transition: transform 0.3s; /*tempo para movimentação*/
+}
+
+div.inferior{
+    display: flex; /*liberar a div*/
+    align-self: flex-end;/*auto-alinhamento: extremidade flexível;*/
+    padding: 15px;
+}
+
+div.submit {
+    margin: auto;
+}
+
+div.submit input {
+    margin: 10px; /*margem*/
+    height: 30px; /*altura do input*/
+    border-radius: 10px; /*borda redonda*/
+    outline: none; /*tirar as bordas quando clica mo imput*/
+
+}
+
+
+div.logar{
+    /*border: 1px solid red; */
+    display: flex; /*flxibilidade do dyslpay */
+    margin: 30px; /*margem*/
+    margin-block-start: auto; /*início do bloco de margem: automático;
+    */
+    gap: 10px; /*espaçamento dos itens*/
+    align-self: flex-end;  /*alinhar os itens*/
+}
+
+div.entrar{
+    /*border: 1px solid red; */
+    display: flex; /*flxibilidade do dyslpay */
+    margin: 10px; /*margem*/
+    margin-block-start: auto; /*início do bloco de margem: automático;
+    */
+    gap: 10px; /*espaçamento dos itens*/
+    align-self: flex-end; /*alinhar os itens*/
+}
+
+div.spam{
+    display: flex;
+    flex-flow: column /*botar em colunas*/
+}
+
+
+div.logar button:hover {
+    transform: scale(1.1); /*movimentação 1.1*/
+    transition: transform 0.3s; /*tempo para movimentação*/
+}
+
+div.entrar button:hover {
+    transform: scale(1.1); /*movimentação 1.1*/
+    transition: transform 0.3s; /*tempo para movimentação*/
+}
+
+
+div.logar button {
+    border: 1px solid rgba(88, 6, 6, 0);
+    background-color: rgba(240, 248, 255, 0.123);
+    outline: none; /*tirar as bordas quando clica mo imput*/
+}
+
+div.entrar button {
+    border: 1px solid rgba(88, 6, 6, 0);
+    background-color: rgba(240, 248, 255, 0.123);
+    outline: none; /*tirar as bordas quando clica mo imput*/
+}
+
+div.logar span {
+    font-size: 35px; /*tamanho da fonte*/
+    
+}
+
+div.inferior a {
+    font-family: 'Boogaloo', cursive;
+    color: #110505;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="" id="CriarConta">
+    <div id="central">
+        <header class="logo">
+            <img src="/imagem/boneco-preto.svg" alt="">
+
+        </header>
+        <span>Criar conta</span>
+        <div class="submit">
+            <input type="text" name="name" placeholder="Nome" id="nomeC">
+            <input type="email" name="email" placeholder="Email" id="email2">
+            <input type="password" name="senha" placeholder="Senha" id="senha2">
+        </div>
+        <div class="logar">
+            <button>  
+                <img src="./imagem/seta.svg" alt="">
+            </button>
+        </div>
+        <div class="spam">
+            <h1 id="senhaalerta"></h1>
+           </div>
+        <div class="inferior">
+            <a href="./index.html">Voltar</a>  
+        </div>
+    </div>
+    <script src="./script2.js"></script>
+    </form>
+
+</body>
+</html>
